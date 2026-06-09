@@ -7,5 +7,5 @@
   </head>
   <body>
     <header>
-      <h1><?php bloginfo('name'); ?></h1>
+      <h1><a href="<?php echo esc_url(site_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
     </header>

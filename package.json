@@ -1,0 +1,38 @@
+{
+  "name": "projxon-gap-workshop-wordpress-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rtl": "rtlcss style.css style-rtl.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PROJXON/PROJXON-GAP-Workshop-WordPress-Theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PROJXON/PROJXON-GAP-Workshop-WordPress-Theme/issues"
+  },
+  "homepage": "https://github.com/PROJXON/PROJXON-GAP-Workshop-WordPress-Theme#readme",
+  "dependencies": {
+    "rtlcss": "^4.3.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  }
+}

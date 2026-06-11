@@ -1077,13 +1077,6 @@ body:not(.no-sidebar) #page.site #siteFooter .site-info {
 .search #siteMain > article.post .entry-title {
   margin-bottom: 0.75rem;
 }
-.blog #siteMain > article.post .entry-title a,
-.home.blog #siteMain > article.post .entry-title a,
-.archive #siteMain > article.post .entry-title a,
-.search #siteMain > article.post .entry-title a {
-  color: #0f172a;
-  text-decoration: none;
-}
 .blog #siteMain > article.post .entry-title a:hover,
 .blog #siteMain > article.post .entry-title a:focus,
 .home.blog #siteMain > article.post .entry-title a:hover,

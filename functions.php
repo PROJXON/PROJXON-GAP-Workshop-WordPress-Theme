@@ -15,3 +15,19 @@ function pjxnwpws_theme_setup() {
 }
 
 add_action('after_setup_theme', 'pjxnwpws_theme_setup');
+
+function pjxnwpws_excerpt_length() {
+  //Excerpts only show the first 50 words now
+	return 50;
+}
+
+add_filter('excerpt_length', 'pjxnwpws_excerpt_length');
+
+/*
+function add_global_body_class( $classes ) {
+    // Add your custom class to the array
+    $classes[] = 'my-custom-global-class';
+    return $classes;
+}
+add_filter( 'body_class', 'add_global_body_class' );
+*/

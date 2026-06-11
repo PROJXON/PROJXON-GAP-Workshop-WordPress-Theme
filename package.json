@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rtl": "rtlcss style.css style-rtl.css"
+    "rtl": "rtlcss style.css style-rtl.css",
+    "watch:rtl": "npx nodemon --watch style.css --exec \"npm run rtl\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/PROJXON/PROJXON-GAP-Workshop-WordPress-Theme#readme",
   "dependencies": {
+    "nodemon": "^3.1.14",
     "rtlcss": "^4.3.0"
   },
   "rtlcssConfig": {

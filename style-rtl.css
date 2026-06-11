@@ -698,26 +698,6 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-.no-sidebar #page.site {
-  display: grid;
-  grid-template-areas: 'header' 'main' 'footer';
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-.no-sidebar #page.site #siteHeader {
-  grid-area: header;
-}
-.no-sidebar #page.site #siteMain {
-  grid-area: main;
-}
-.no-sidebar #page.site #siteFooter {
-  grid-area: footer;
-}
-
-/*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Site layout, header & footer
@@ -832,7 +812,7 @@ textarea {
   margin: 0 0.5rem;
 }
 
-body:not(.no-sidebar) #page.site {
+body #page.site {
   display: grid;
   gap: 0 3rem;
   grid-template-areas: 'header header' 'main sidebar' 'footer footer';
@@ -844,27 +824,27 @@ body:not(.no-sidebar) #page.site {
   padding-left: 1.5rem;
   width: 100%;
 }
-body:not(.no-sidebar) #page.site #siteHeader {
+body #page.site #siteHeader {
   grid-area: header;
   max-width: none;
   padding: 1.5rem;
 }
-body:not(.no-sidebar) #page.site #siteMain {
+body #page.site #siteMain {
   grid-area: main;
   max-width: none;
   padding-right: 0;
   padding-left: 0;
 }
-body:not(.no-sidebar) #page.site .widget-area {
+body #page.site .widget-area {
   align-self: start;
   grid-area: sidebar;
   padding-bottom: 3rem;
   padding-top: 3rem;
 }
-body:not(.no-sidebar) #page.site #siteFooter {
+body #page.site #siteFooter {
   grid-area: footer;
 }
-body:not(.no-sidebar) #page.site #siteFooter .site-info {
+body #page.site #siteFooter .site-info {
   max-width: none;
   padding-right: 0;
   padding-left: 0;

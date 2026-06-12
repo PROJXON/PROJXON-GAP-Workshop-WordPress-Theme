@@ -1128,16 +1128,10 @@ body #page.site #siteFooter .site-info {
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
 }
-.entry-meta .posted-on,
 .entry-meta .byline,
 .entry-meta .cat-links,
 .entry-meta .tags-links {
   display: inline-block;
-}
-.entry-meta .posted-on + .byline::before {
-  color: #cbd5e1;
-  content: '·';
-  margin: 0 0.5rem;
 }
 .entry-meta a {
   color: #64748b;

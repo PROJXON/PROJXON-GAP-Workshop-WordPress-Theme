@@ -852,11 +852,11 @@ body #page.site #siteFooter .site-info {
 
 /* Navigation
 --------------------------------------------- */
-.main-navigation {
+.menu {
   display: block;
   width: 100%;
 }
-.main-navigation .menu-toggle {
+.menu .menu-toggle {
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
@@ -865,20 +865,20 @@ body #page.site #siteFooter .site-info {
   font-weight: 600;
   padding: 0.6em 1em;
 }
-.main-navigation .menu-toggle:hover {
+.menu .menu-toggle:hover {
   border-color: #cbd5e1;
 }
-.main-navigation .menu-toggle:focus-visible {
+.menu .menu-toggle:focus-visible {
   outline: 2px solid #4f46e5;
   outline-offset: 2px;
 }
-.main-navigation ul {
+.menu ul {
   display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-.main-navigation ul ul {
+.menu ul ul {
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
@@ -890,28 +890,28 @@ body #page.site #siteFooter .site-info {
   top: 100%;
   z-index: 99999;
 }
-.main-navigation ul ul ul {
+.menu ul ul ul {
   left: -999em;
   top: 0;
 }
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.menu ul ul li:hover > ul,
+.menu ul ul li.focus > ul {
   display: block;
   left: auto;
 }
-.main-navigation ul ul a {
+.menu ul ul a {
   font-size: 0.875rem;
   padding: 0.75rem 1.5rem;
   width: 12.5rem;
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.menu ul li:hover > ul,
+.menu ul li.focus > ul {
   left: auto;
 }
-.main-navigation li {
+.menu li {
   position: relative;
 }
-.main-navigation a {
+.menu a {
   border-radius: 0.5rem;
   color: #1e293b;
   display: block;
@@ -923,34 +923,34 @@ body #page.site #siteFooter .site-info {
     background 150ms ease,
     color 150ms ease;
 }
-.main-navigation a:hover,
-.main-navigation a:focus {
+.menu a:hover,
+.menu a:focus {
   background: rgba(79, 70, 229, 0.08);
   color: #4f46e5;
 }
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
+.menu .current_page_item > a,
+.menu .current-menu-item > a,
+.menu .current_page_ancestor > a,
+.menu .current-menu-ancestor > a {
   background: rgba(79, 70, 229, 0.1);
   color: #4f46e5;
   font-weight: 600;
 }
 
 .menu-toggle,
-.main-navigation.toggled ul {
+.menu.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  .main-navigation {
+  .menu {
     flex: 0 1 auto;
     width: auto;
   }
-  .main-navigation .menu-toggle {
+  .menu .menu-toggle {
     display: none;
   }
-  .main-navigation ul {
+  .menu ul {
     align-items: center;
     display: flex;
     gap: 0.5rem;

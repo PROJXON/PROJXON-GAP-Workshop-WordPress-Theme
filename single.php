@@ -6,13 +6,17 @@
       <h2 class="entry-title"><?php the_title(); ?></h2>
       <div class="entry-meta">
 				<span class="byline">
-          Posted by <?php the_author(); ?> on <?php echo get_the_date(); ?>
+          <?php echo sprintf(
+            esc_html_x('Posted by %1$s on %2$s', 'Post author and date', 'projxon-gap-workshop-wordpress-theme'), get_the_author(), get_the_date()
+          ); ?>
         </span>
 			</div>
       <div class="entry-content">
         <?php the_content(); ?>
       </div>
     </article>
-  <?php }
+
+    <?php if (comments_open() || get_comments_number()) comments_template();
+  }
 
 get_footer(); ?>

@@ -23,11 +23,13 @@ function pjxnwpws_excerpt_length() {
 
 add_filter('excerpt_length', 'pjxnwpws_excerpt_length');
 
-/*
-function add_global_body_class( $classes ) {
-    // Add your custom class to the array
-    $classes[] = 'my-custom-global-class';
-    return $classes;
+function pjxnwpws_register_sidebar() {
+  register_sidebar([
+    'name' => 'Sidebar',
+    'id' => 'sidebar',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>'
+  ]);
 }
-add_filter( 'body_class', 'add_global_body_class' );
-*/
+
+add_action('widgets_init', 'pjxnwpws_register_sidebar');

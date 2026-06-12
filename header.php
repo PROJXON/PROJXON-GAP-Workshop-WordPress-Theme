@@ -7,7 +7,7 @@
   </head>
   <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <div id="page" class="site no-sidebar">
+    <div id="page" class="site">
 
     <header id="siteHeader">
       <h1><a href="<?php echo esc_url(site_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>

@@ -4,7 +4,7 @@
 
       <footer id="siteFooter">
         <div class="site-info">
-          <a href="<?php echo esc_url(__('https://wordpress.org/', 'projxon-gap-workshop-wordpress-theme')); ?>">
+          <a href="<?php echo esc_url(__('https://wordpress.org/')); ?>">
 				    <?php printf(esc_html__('Proudly powered by %s', 'projxon-example-theme'), 'WordPress'); ?>
 			    </a>
           <br />

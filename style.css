@@ -1237,7 +1237,6 @@ body #page.site #siteFooter .site-info {
 .comments-title,
 .comment-reply-title {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .comment-list {
@@ -1251,6 +1250,9 @@ body #page.site #siteFooter .site-info {
 }
 .comment-list .comment:first-child {
   border-top: 0;
+}
+.comment-list .comment:last-child {
+  padding-bottom: 0;
 }
 .comment-list .children {
   list-style: none;
@@ -1280,9 +1282,16 @@ body #page.site #siteFooter .site-info {
   display: block;
 }
 
-.comment-form {
-  margin-top: 2rem;
+.comment-body p {
+  font-size: 1rem;
 }
+
+.comment-respond {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid black;
+}
+
 .comment-form label {
   color: #0f172a;
   display: block;

@@ -33,3 +33,9 @@ function pjxnwpws_register_sidebar() {
 }
 
 add_action('widgets_init', 'pjxnwpws_register_sidebar');
+
+function pjxnwpws_alter_comment_form($defaults) {
+    $defaults['title_reply'] = __('Leave a comment');
+    return $defaults;
+}
+add_filter('comment_form_defaults', 'pjxnwpws_alter_comment_form');

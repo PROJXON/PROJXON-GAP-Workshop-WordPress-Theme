@@ -7,7 +7,7 @@
       <div class="entry-meta">
 				<span class="byline">
           <?php echo sprintf(
-            esc_html_x('Posted by %1$s on %2$s', 'Post author and date', 'projxon-gap-workshop-wordpress-theme'), get_the_author(), get_the_date()
+            esc_html_x('Posted by %1$s on %2$s', 'Post author and date'), get_the_author(), get_the_date()
           ); ?>
         </span>
 			</div>

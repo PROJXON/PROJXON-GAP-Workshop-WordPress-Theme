@@ -856,26 +856,18 @@ body #page.site #siteFooter .site-info {
 
 /* Navigation
 --------------------------------------------- */
-.menu {
+.widget .menu {
   display: block;
   width: 100%;
 }
-.menu .menu-toggle {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  color: #0f172a;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.6em 1em;
+
+.menu#childMenu {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
 }
-.menu .menu-toggle:hover {
-  border-color: #cbd5e1;
-}
-.menu .menu-toggle:focus-visible {
-  outline: 2px solid #4f46e5;
-  outline-offset: 2px;
-}
+
 .menu ul {
   display: none;
   list-style: none;
@@ -934,7 +926,7 @@ body #page.site #siteFooter .site-info {
 }
 .menu .current_page_item > a,
 .menu .current-menu-item > a,
-.menu .current_page_ancestor > a,
+.menu .current-page-ancestor > a,
 .menu .current-menu-ancestor > a {
   background: rgba(79, 70, 229, 0.1);
   color: #4f46e5;
@@ -1316,12 +1308,7 @@ body #page.site #siteFooter .site-info {
   padding: 0;
 }
 .widget ul li {
-  border-bottom: 1px solid #e2e8f0;
-  padding: 0.75rem 0;
-}
-.widget ul li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
+  padding-top: 0.75rem;
 }
 .widget select {
   max-width: 100%;

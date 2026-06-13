@@ -3,7 +3,9 @@
   while (have_posts()) {
     the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h2 class="entry-title">
+        <a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a>
+      </h2>
       <div class="entry-meta">
 				<span class="byline">
           <?php echo sprintf(
@@ -13,6 +15,12 @@
 			</div>
       <div class="entry-content">
         <?php the_excerpt(); ?>
+      </div>
+      <div class="comments-number">
+        <a href="<?php echo esc_url(get_permalink() . '#comments'); ?>">
+          <span class="dashicons dashicons-admin-comments"></span>
+          <span><?php echo get_comments_number(); ?></span>
+        </a>
       </div>
     </article>
   <?php }

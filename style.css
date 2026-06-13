@@ -724,6 +724,10 @@ textarea {
   z-index: 100;
 }
 
+#siteHeader h1 {
+  margin: 0;
+}
+
 .admin-bar #siteHeader {
   top: 32px;
 }

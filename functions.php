@@ -23,7 +23,16 @@ function pjxnwpws_excerpt_length() {
 
 add_filter('excerpt_length', 'pjxnwpws_excerpt_length');
 
+function pjxnwpws_alter_comment_form($defaults) {
+    //Change what the text on the comment form says
+    $defaults['title_reply'] = __('Leave a comment');
+    return $defaults;
+}
+
+add_filter('comment_form_defaults', 'pjxnwpws_alter_comment_form');
+
 function pjxnwpws_register_sidebar() {
+  //Creates sidebar widget
   register_sidebar([
     'name' => 'Sidebar',
     'id' => 'sidebar',
@@ -33,9 +42,3 @@ function pjxnwpws_register_sidebar() {
 }
 
 add_action('widgets_init', 'pjxnwpws_register_sidebar');
-
-function pjxnwpws_alter_comment_form($defaults) {
-    $defaults['title_reply'] = __('Leave a comment');
-    return $defaults;
-}
-add_filter('comment_form_defaults', 'pjxnwpws_alter_comment_form');

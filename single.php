@@ -12,7 +12,8 @@
         </span>
 			</div>
       <div class="entry-content">
-        <?php the_content(); ?>
+        <?php the_post_thumbnail('banner-image');
+        the_content(); ?>
       </div>
     </article>
 

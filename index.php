@@ -13,8 +13,9 @@
           ); ?>
         </span>
 			</div>
-      <div class="entry-content">
-        <?php the_excerpt(); ?>
+      <div class="entry-content <?php if (has_post_thumbnail()) echo 'has-thumbnail'; ?>">
+        <?php the_post_thumbnail('small-thumbnail');
+        the_excerpt(); ?>
       </div>
       <div class="comments-number">
         <a href="<?php echo esc_url(get_permalink() . '#comments'); ?>">

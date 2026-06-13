@@ -1163,7 +1163,6 @@ body #page.site #siteFooter .site-info {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 1.5rem 0 0;
 }
@@ -1355,6 +1354,12 @@ body #page.site #siteFooter .site-info {
   margin-right: calc(50% - 50vw);
   max-width: 100vw;
   width: 100vw;
+}
+
+.entry-content.has-thumbnail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
 }
 
 /* Captions

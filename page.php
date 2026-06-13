@@ -9,7 +9,8 @@
       <nav class="menu" id="childMenu">
         <?php wp_list_pages([
           'title_li' => null,
-          'child_of' => $parentID ? $parentID : get_the_ID()
+          'child_of' => $parentID ? $parentID : get_the_ID(),
+          'sort_column' => 'menu_order'
         ]); ?>
       </nav>
     <?php } ?>

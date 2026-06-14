@@ -958,55 +958,12 @@ body #page.site #siteFooter .site-info {
   border-top: 1px solid #e2e8f0;
   margin: 3rem 0 0;
   padding-top: 2rem;
+  text-align: center;
 }
 #siteMain .comment-navigation,
 #siteMain .posts-navigation,
 #siteMain .post-navigation {
   margin: 3rem 0 0;
-}
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-.comment-navigation .nav-previous,
-.comment-navigation .nav-next,
-.posts-navigation .nav-previous,
-.posts-navigation .nav-next,
-.post-navigation .nav-previous,
-.post-navigation .nav-next {
-  flex: 1 0 50%;
-}
-.comment-navigation .nav-previous a,
-.comment-navigation .nav-next a,
-.posts-navigation .nav-previous a,
-.posts-navigation .nav-next a,
-.post-navigation .nav-previous a,
-.post-navigation .nav-next a {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-}
-.comment-navigation .nav-previous a:hover,
-.comment-navigation .nav-next a:hover,
-.posts-navigation .nav-previous a:hover,
-.posts-navigation .nav-next a:hover,
-.post-navigation .nav-previous a:hover,
-.post-navigation .nav-next a:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
-}
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  text-align: end;
 }
 
 /* Posts and pages

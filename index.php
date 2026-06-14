@@ -2,7 +2,7 @@
 
   while (have_posts()) {
     the_post();
-    get_template_part('template-parts/content', 'post');
+    get_template_part('template-parts/article', 'post');
   }
 
 get_footer(); ?>

@@ -4,7 +4,7 @@
   if (is_archive()) { ?>
     <h2><?php
       if (is_category()) {
-        echo 'All posts in ' . single_cat_title() . ':';
+        echo 'All posts in ' . single_cat_title('', false) . ':';
       } elseif (is_author()) {
         the_post();
         echo 'All posts written by ' . get_the_author() . ':';

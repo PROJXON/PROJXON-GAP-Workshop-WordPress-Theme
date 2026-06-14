@@ -26,7 +26,8 @@
     get_template_part('template-parts/article', 'post');
   }
 
-  if (wp_count_posts()->publish > get_option('posts_per_page')) { ?>
+  global $wp_query;
+  if ($wp_query->found_posts > get_option('posts_per_page')) { ?>
     <nav class="posts-navigation">
       <?php echo paginate_links(); ?>
     </nav>

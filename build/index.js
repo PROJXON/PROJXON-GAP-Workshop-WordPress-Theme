@@ -1,0 +1,1 @@
+(()=>{"use strict";new class{constructor(){alert("LiveSearch file is being imported")}}})();

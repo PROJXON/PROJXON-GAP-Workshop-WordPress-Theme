@@ -1,1 +1,3 @@
-//alert('Hello world!');
+import LiveSearch from './modules/LiveSearch';
+
+new LiveSearch();

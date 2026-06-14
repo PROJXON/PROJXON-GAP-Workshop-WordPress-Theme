@@ -1280,7 +1280,7 @@ body #page.site #siteFooter .site-info {
 
 /* Search Form
 --------------------------------------------- */
-#searchform > div {
+#searchform {
   display: flex;
   gap: 1rem;
 }

@@ -5,6 +5,7 @@
     $parentID = wp_get_post_parent_id(get_the_ID());
     $hasChildren = get_pages(['child_of' => get_the_ID()]);
 
+    //Only display if page is a parent page or is a child of another page. You can also create a file called page-[post ID].php or page-[post-slug].php to power a single page.
     if ($parentID || $hasChildren) { ?>
       <nav class="menu" id="childMenu">
         <?php wp_list_pages([

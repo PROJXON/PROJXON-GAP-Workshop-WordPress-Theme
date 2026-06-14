@@ -11,6 +11,7 @@
 
     <header id="siteHeader">
       <h1><a href="<?php echo esc_url(site_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
+      <?php get_search_form(); ?>
     </header>
 
     <main id="siteMain">

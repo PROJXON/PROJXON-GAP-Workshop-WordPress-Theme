@@ -13,14 +13,9 @@
           'sort_column' => 'menu_order'
         ]); ?>
       </nav>
-    <?php } ?>
+    <?php }
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <h2 class="entry-title"><?php the_title(); ?></h2>
-      <div class="entry-content">
-        <?php the_content(); ?>
-      </div>
-    </article>
-  <?php }
+    get_template_part('template-parts/content', 'page');
+  }
 
 get_footer(); ?>

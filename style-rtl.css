@@ -406,9 +406,8 @@ pre {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
-  font-family:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   font-size: 0.875rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -423,9 +422,8 @@ tt,
 var {
   background: #f8fafc;
   border-radius: 0.375rem;
-  font-family:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   font-size: 0.9em;
   padding: 0.1em 0.35em;
 }
@@ -907,12 +905,17 @@ body #page.site #siteFooter .site-info {
 .menu li {
   position: relative;
 }
+
 .menu a {
+  font-weight: 500;
+}
+
+.menu a,
+#liveSearch a {
   border-radius: 0.5rem;
   color: #1e293b;
   display: block;
   font-size: 0.875rem;
-  font-weight: 500;
   padding: 0.75rem 1rem;
   text-decoration: none;
   transition:
@@ -920,7 +923,8 @@ body #page.site #siteFooter .site-info {
     color 150ms ease;
 }
 .menu a:hover,
-.menu a:focus {
+.menu a:focus,
+#liveSearch a:hover {
   background: rgba(79, 70, 229, 0.08);
   color: #4f46e5;
 }
@@ -1292,6 +1296,27 @@ body #page.site #siteFooter .site-info {
 
 input#s {
   width: 20rem;
+}
+
+#searchWrapper {
+  position: relative;
+}
+
+#liveSearch {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  list-style: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+}
+
+#liveSearch li:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+#liveSearch li span {
+  font-weight: 500;
 }
 
 /* Media

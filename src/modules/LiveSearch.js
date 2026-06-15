@@ -6,6 +6,8 @@ export default class LiveSearch {
     this.searchResults = $('#liveSearch');
     this.searchField = $('#s');
     this.prevSearchQuery = '';
+    this.timer;
+    this.spinnerVisible = false;
 
     this.searchField.on('input', this.inputChanged.bind(this));
     this.searchField.on('focus', this.searchFieldFocused.bind(this));
@@ -16,8 +18,25 @@ export default class LiveSearch {
     if (this.searchField.val() !== this.prevSearchQuery) {
       this.prevSearchQuery = this.searchField.val();
       if (this.prevSearchQuery === '') this.searchResultsInvisible();
-      else this.searchResultsVisible();
+      else {
+        clearTimeout(this.timer);
+        if (!this.spinnerVisible) {
+          this.searchResults.html('<div class="loading-icon"></div>');
+          this.spinnerVisible = true;
+        }
+        this.searchResultsVisible();
+        this.timer = setTimeout(this.displaySearchResults.bind(this), 800);
+      }
     }
+  }
+
+  displaySearchResults() {
+    this.searchResults.html(`
+      <li><a href="#">Blog post by <span>Author</span></a></li>
+			<li><a href="#">Blog post by <span>Author</span></a></li>
+			<li><a href="#">Blog post by <span>Author</span></a></li>
+    `);
+    this.spinnerVisible = false;
   }
 
   searchFieldFocused() {

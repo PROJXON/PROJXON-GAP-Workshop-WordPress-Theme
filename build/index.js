@@ -21,6 +21,8 @@ class LiveSearch {
     this.searchResults = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#liveSearch');
     this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#s');
     this.prevSearchQuery = '';
+    this.timer;
+    this.spinnerVisible = false;
     this.searchField.on('input', this.inputChanged.bind(this));
     this.searchField.on('focus', this.searchFieldFocused.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', this.documentClick.bind(this));
@@ -28,8 +30,24 @@ class LiveSearch {
   inputChanged() {
     if (this.searchField.val() !== this.prevSearchQuery) {
       this.prevSearchQuery = this.searchField.val();
-      if (this.prevSearchQuery === '') this.searchResultsInvisible();else this.searchResultsVisible();
+      if (this.prevSearchQuery === '') this.searchResultsInvisible();else {
+        clearTimeout(this.timer);
+        if (!this.spinnerVisible) {
+          this.searchResults.html('<div class="loading-icon"></div>');
+          this.spinnerVisible = true;
+        }
+        this.searchResultsVisible();
+        this.timer = setTimeout(this.displaySearchResults.bind(this), 800);
+      }
     }
+  }
+  displaySearchResults() {
+    this.searchResults.html(`
+      <li><a href="#">Blog post by <span>Author</span></a></li>
+			<li><a href="#">Blog post by <span>Author</span></a></li>
+			<li><a href="#">Blog post by <span>Author</span></a></li>
+    `);
+    this.spinnerVisible = false;
   }
   searchFieldFocused() {
     if (this.prevSearchQuery !== '') this.searchResultsVisible();

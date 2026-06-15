@@ -34,18 +34,20 @@ export default class LiveSearch {
     $.getJSON(
       `${siteData.domain}/wp-json/custom/v1/combined?search=${this.searchField.val()}`,
       (data) => {
-        this.searchResults.html(`
-        ${data
-          .map(
-            (item) => `<li>
-            <a href="${item.link}">
-              ${item.title}${item.type === 'post' ? ` by <span>${item.author}</span>` : ''}
-            </a>
-          </li>
-          `,
-          )
-          .join('')}
-      `);
+        if (data.length) {
+          this.searchResults.html(`
+          ${data
+            .map(
+              (item) => `<li>
+              <a href="${item.link}">
+                ${item.title}${item.type === 'post' ? ` by <span>${item.author}</span>` : ''}
+              </a>
+            </li>
+            `,
+            )
+            .join('')}
+        `);
+        } else this.searchResults.html(`<li id="noResults">No results found.</li>`);
       },
     );
 

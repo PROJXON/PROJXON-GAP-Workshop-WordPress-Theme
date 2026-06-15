@@ -32,7 +32,7 @@ export default class LiveSearch {
 
   displaySearchResults() {
     $.getJSON(
-      `http://theme-tester.local/wp-json/custom/v1/combined?search=${this.searchField.val()}`,
+      `${siteData.domain}/wp-json/custom/v1/combined?search=${this.searchField.val()}`,
       (data) => {
         this.searchResults.html(`
         ${data

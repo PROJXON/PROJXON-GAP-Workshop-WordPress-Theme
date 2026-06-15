@@ -42,7 +42,7 @@ class LiveSearch {
     }
   }
   displaySearchResults() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(`http://theme-tester.local/wp-json/custom/v1/combined?search=${this.searchField.val()}`, data => {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(`${siteData.domain}/wp-json/custom/v1/combined?search=${this.searchField.val()}`, data => {
       this.searchResults.html(`
         ${data.map(item => `<li>
             <a href="${item.link}">

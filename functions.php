@@ -10,6 +10,9 @@ function pjxnwpws_add_scripts() {
 
   //Import JS file from build folder
   wp_enqueue_script('main-js', get_theme_file_uri('/build/index.js'), ['jquery'], filemtime(get_theme_file_path("/build/index.js")), true);
+
+  //Output JS data into our web page's HTML source
+  wp_localize_script('main-js', 'siteData', ['domain' => get_site_url()]);
 }
 
 add_action('wp_enqueue_scripts', 'pjxnwpws_add_scripts');

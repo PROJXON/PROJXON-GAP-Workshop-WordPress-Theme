@@ -1319,6 +1319,10 @@ input#s {
   font-weight: 500;
 }
 
+#liveSearch.invisible {
+  visibility: hidden;
+}
+
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley,

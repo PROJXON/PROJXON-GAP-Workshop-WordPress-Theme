@@ -31,11 +31,24 @@ export default class LiveSearch {
   }
 
   displaySearchResults() {
-    this.searchResults.html(`
-      <li><a href="#">Blog post by <span>Author</span></a></li>
-			<li><a href="#">Blog post by <span>Author</span></a></li>
-			<li><a href="#">Blog post by <span>Author</span></a></li>
-    `);
+    $.getJSON(
+      `http://theme-tester.local/wp-json/custom/v1/combined?search=${this.searchField.val()}`,
+      (data) => {
+        this.searchResults.html(`
+        ${data
+          .map(
+            (item) => `<li>
+            <a href="${item.link}">
+              ${item.title}${item.type === 'post' ? ` by <span>${item.author}</span>` : ''}
+            </a>
+          </li>
+          `,
+          )
+          .join('')}
+      `);
+      },
+    );
+
     this.spinnerVisible = false;
   }
 

@@ -20,7 +20,6 @@ export default class LiveSearch {
   }
 
   searchFieldFocused() {
-    console.log(this.prevSearchQuery);
     if (this.prevSearchQuery !== '') this.searchResultsVisible();
   }
 

@@ -1,4 +1,6 @@
 <?php
+require get_theme_file_path('/inc/search-route.php');
+
 function pjxnwpws_add_scripts() {
   //Import style.css
   wp_enqueue_style('main_stylesheet', get_stylesheet_uri());

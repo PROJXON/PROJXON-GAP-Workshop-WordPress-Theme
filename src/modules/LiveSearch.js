@@ -2,16 +2,17 @@ import $ from 'jquery';
 
 export default class LiveSearch {
   constructor() {
+    this.searchWrapper = $('#searchWrapper');
     this.searchResults = $('#liveSearch');
     this.searchField = $('#s');
     this.prevSearchQuery = '';
 
-    this.searchField.on('keyup', this.keyPressed.bind(this));
-    this.searchField.focus(this.searchFieldFocused.bind(this));
-    this.searchField.blur(this.searchResultsInvisible.bind(this));
+    this.searchField.on('input', this.inputChanged.bind(this));
+    this.searchField.on('focus', this.searchFieldFocused.bind(this));
+    $(document).on('click', this.documentClick.bind(this));
   }
 
-  keyPressed() {
+  inputChanged() {
     if (this.searchField.val() !== this.prevSearchQuery) {
       this.prevSearchQuery = this.searchField.val();
       if (this.prevSearchQuery === '') this.searchResultsInvisible();
@@ -21,6 +22,12 @@ export default class LiveSearch {
 
   searchFieldFocused() {
     if (this.prevSearchQuery !== '') this.searchResultsVisible();
+  }
+
+  documentClick(e) {
+    if (!$(e.target).closest(this.searchWrapper).length) {
+      this.searchResultsInvisible();
+    }
   }
 
   searchResultsVisible() {

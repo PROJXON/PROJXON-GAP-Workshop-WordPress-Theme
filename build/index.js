@@ -17,22 +17,27 @@ __webpack_require__.r(__webpack_exports__);
 
 class LiveSearch {
   constructor() {
+    this.searchWrapper = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#searchWrapper');
     this.searchResults = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#liveSearch');
     this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#s');
     this.prevSearchQuery = '';
-    this.searchField.on('keyup', this.keyPressed.bind(this));
-    this.searchField.focus(this.searchFieldFocused.bind(this));
-    this.searchField.blur(this.searchResultsInvisible.bind(this));
+    this.searchField.on('input', this.inputChanged.bind(this));
+    this.searchField.on('focus', this.searchFieldFocused.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', this.documentClick.bind(this));
   }
-  keyPressed() {
+  inputChanged() {
     if (this.searchField.val() !== this.prevSearchQuery) {
       this.prevSearchQuery = this.searchField.val();
       if (this.prevSearchQuery === '') this.searchResultsInvisible();else this.searchResultsVisible();
     }
   }
   searchFieldFocused() {
-    console.log(this.prevSearchQuery);
     if (this.prevSearchQuery !== '') this.searchResultsVisible();
+  }
+  documentClick(e) {
+    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest(this.searchWrapper).length) {
+      this.searchResultsInvisible();
+    }
   }
   searchResultsVisible() {
     this.searchResults.removeClass('invisible');
